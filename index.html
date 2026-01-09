@@ -131,7 +131,7 @@
                     <div class="flex rounded-lg border border-slate-300 overflow-hidden text-xs" data-var="age"><button class="toggle-btn px-4 py-2" data-val="60">≥ 60 years (+1)</button><button class="toggle-btn px-4 py-2" data-val="young">< 60 years</button></div>
                 </div>
                 <div class="flex justify-between items-center"><span class="text-slate-600 font-medium text-sm">Baseline eGFR</span>
-                    <div class="flex rounded-lg border border-slate-300 overflow-hidden text-[10px]" data-var="egfr"><button class="toggle-btn px-1 py-2" data-val="low">< 30 (+1)</button><button class="toggle-btn px-1 py-2" data-val="30">30-59</button><button class="toggle-btn px-1 py-2" data-val="high">≥ 60</button></div>
+                    <div class="flex rounded-lg border border-slate-300 overflow-hidden text-[10px]" data-var="egfr"><button class="toggle-btn px-2 py-2" data-val="low">< 30 (+1)</button><button class="toggle-btn px-2 py-2" data-val="30">30-59</button><button class="toggle-btn px-2 py-2" data-val="high">≥ 60</button></div>
                 </div>
                 <div class="flex justify-between items-center"><span class="text-slate-600 font-medium text-sm text-left leading-tight">INR stabilisation within 1 year</span>
                     <div class="flex rounded-lg border border-slate-300 overflow-hidden text-[10px]" data-var="stab"><button class="toggle-btn px-2 py-2" data-val="no">Not achieved (+1)</button><button class="toggle-btn px-2 py-2" data-val="yes">Achieved</button></div>
@@ -144,7 +144,7 @@
                 <h3 class="font-semibold text-slate-500 uppercase tracking-wider text-xs">Total Score</h3>
                 <div id="caria-score" class="text-7xl font-bold text-slate-400 my-3">0</div>
                 <div id="caria-desc" class="font-semibold text-lg">...</div>
-                <p class="text-[10px] text-slate-500 mt-4 leading-tight font-medium">A total score of 2 or more suggests "Likely high stroke risk", while a score less than 2 suggests "Less likely stroke risk".</p>
+                <p class="text-[10px] text-slate-500 mt-4 leading-tight font-medium">A total score of 2 or more suggests "Likely high stroke risk", while a score less than 2 suggests "Likely low stroke risk".</p>
             </div>
         </div>
     </div>
@@ -167,8 +167,8 @@
                 <div class="flex justify-between items-center"><span class="text-slate-600 font-medium text-sm">Antiplatelet drug use</span>
                     <div class="flex rounded-lg border border-slate-300 overflow-hidden text-sm" data-var="anti"><button class="toggle-btn px-4 py-2" data-val="1">Yes (+1)</button><button class="toggle-btn px-4 py-2" data-val="0">No</button></div>
                 </div>
-                <div class="flex justify-between items-center"><span class="text-slate-600 font-medium text-sm text-left">Platelet < 240 x 10⁹/L</span>
-                    <div class="flex rounded-lg border border-slate-300 overflow-hidden text-sm" data-var="plat"><button class="toggle-btn px-4 py-2" data-val="1">Yes (+1)</button><button class="toggle-btn px-4 py-2" data-val="0">No</button></div>
+                <div class="flex justify-between items-center"><span class="text-slate-600 font-medium text-sm text-left">Baseline platelet counts</span>
+                    <div class="flex rounded-lg border border-slate-300 overflow-hidden text-sm" data-var="plat"><button class="toggle-btn px-4 py-2" data-val="1">< 240 (+1)</button><button class="toggle-btn px-4 py-2" data-val="0">≥ 240</button></div>
                 </div>
                 <div class="flex flex-col sm:flex-row justify-between sm:items-center space-y-2 sm:space-y-0 text-left leading-tight"><span class="text-slate-600 font-medium text-xs">Total dose < 20mg/wk to reach 1st INR</span>
                     <div class="flex rounded-lg border border-slate-300 overflow-hidden text-sm" data-var="dose"><button class="toggle-btn px-4 py-2" data-val="1">Yes (+1)</button><button class="toggle-btn px-4 py-2" data-val="0">No</button></div>
@@ -187,7 +187,7 @@
                 <h3 class="font-semibold text-slate-500 uppercase tracking-wider text-xs">Total Score</h3>
                 <div id="factred-score" class="text-7xl font-bold text-slate-400 my-3">0</div>
                 <div id="factred-desc" class="font-semibold text-lg">...</div>
-                <p class="text-[10px] text-slate-500 mt-4 leading-tight font-medium">A total score of 5 or more suggests "Likely high bleeding risk", while a score less than 5 suggests "Less likely bleeding risk".</p>
+                <p class="text-[10px] text-slate-500 mt-4 leading-tight font-medium">A total score of 5 or more suggests "Likely high bleeding risk", while a score less than 5 suggests "Likely low bleeding risk".</p>
             </div>
         </div>
     </div>
@@ -433,7 +433,7 @@
                 desc.className = "font-semibold text-lg text-red-600";
             } else {
                 el.className = "text-7xl font-bold my-3 text-green-600";
-                desc.innerText = "Less likely stroke risk";
+                desc.innerText = "Likely low stroke risk";
                 desc.className = "font-semibold text-lg text-green-600";
             }
         }
@@ -456,7 +456,7 @@
                 desc.className = "font-semibold text-lg text-red-600";
             } else {
                 el.className = "text-7xl font-bold my-3 text-green-600";
-                desc.innerText = "Less likely bleeding risk";
+                desc.innerText = "Likely low bleeding risk";
                 desc.className = "font-semibold text-lg text-green-600";
             }
         }
